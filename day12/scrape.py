@@ -8,7 +8,7 @@ from requests_html import HTML
 BASE_DIR = os.path.dirname(__file__)
 
 
-def url_to_txt(url, year, filename = "world.html", save = False):
+def url_to_txt(url, year, filename="world.html", save = False):
     r = requests.get(url)
     if r.status_code == 200:
         html_text = r.text
@@ -63,9 +63,6 @@ def run(start_year=None, years_ago=0):
         parse_and_extract(url, name=start_year)
         print(f"Finished {start_year}")
         start_year -= 1
-
-
-
 
 
 if __name__ == "__main__":
